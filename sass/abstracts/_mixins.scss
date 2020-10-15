@@ -2,7 +2,16 @@
 // note: 1em = 16px by browser default
 
 @mixin respond($breakpoint) {
-    @if $breakpoint == mobile {
-        @media only screen and (max-width: 24em) { @content }; //approx. 375px
-    }
+  @if $breakpoint == tablet-landscape {
+    @media only screen and (max-width: 75em) {@content}; // 1200px
+  }
+  @if $breakpoint == small-tablet-landscape {
+    @media only screen and (max-width: 60em) {@content}; // 960px
+  }
+  @if $breakpoint == tablet-portrait {
+    @media only screen and (max-width: 48.5em) {@content}; // 776px
+  }
+  @if $breakpoint == mobile {
+       @media only screen and (max-width: 40em) { @content }; //approx. 650px
+  }
 }

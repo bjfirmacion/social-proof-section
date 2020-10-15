@@ -9,6 +9,10 @@
     background-position: top left, bottom right;
     background-repeat: no-repeat;
 
+    @include respond(tablet-landscape) {
+      padding: 10rem 5rem;
+    }
+
     @include respond(mobile) {
         width: 100%;
         border: 1px solid red;
@@ -30,6 +34,11 @@
     .header-textbox {
         flex: 0 1 44.5rem;
         margin-right: auto;
+
+        @include respond(small-tablet-landscape) {
+          flex: 0 1 60%;
+          margin-right: 2rem;
+        }
 
         @include respond(mobile) {
             margin-right: 0;

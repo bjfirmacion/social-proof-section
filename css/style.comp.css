@@ -14,9 +14,12 @@
 
 html {
   font-size: 62.5%; }
-  @media only screen and (max-width: 24em) {
+  @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
+  @media only screen and (max-width: 40em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Spartan", sans-serif;
@@ -26,7 +29,7 @@ body {
 .heading-secondary--main {
   font-size: 4.5rem;
   display: block; }
-  @media only screen and (max-width: 24em) {
+  @media only screen and (max-width: 40em) {
     .heading-secondary--main {
       font-size: 3.5rem; } }
 
@@ -36,12 +39,17 @@ body {
   line-height: 1.7;
   display: block;
   margin-top: 1.5rem; }
-  @media only screen and (max-width: 24em) {
+  @media only screen and (max-width: 40em) {
     .heading-secondary--sub {
       font-size: 1.5rem; } }
 
 .paragraph {
   line-height: 1.7; }
+
+.container {
+  border: 1px solid red;
+  max-width: 111rem;
+  margin: 0 auto; }
 
 .attribution {
   font-size: 11px;
@@ -54,8 +62,11 @@ body {
 .ratings {
   display: flex;
   flex-direction: column;
-  flex: 1; }
-  @media only screen and (max-width: 24em) {
+  flex: 0 1 54rem; }
+  @media only screen and (max-width: 60em) {
+    .ratings {
+      flex: 0 2 40%; } }
+  @media only screen and (max-width: 40em) {
     .ratings {
       width: 100%; } }
   .ratings__box {
@@ -67,10 +78,19 @@ body {
     align-items: center;
     font-size: 1.3rem;
     font-weight: 700; }
-    @media only screen and (max-width: 24em) {
+    @media only screen and (max-width: 75em) {
       .ratings__box {
-        width: 100%;
-        flex-direction: column; } }
+        padding: 1.75rem 3rem; } }
+    @media only screen and (max-width: 60em) {
+      .ratings__box {
+        flex-direction: column;
+        width: 100%; } }
+    @media only screen and (max-width: 48.5em) {
+      .ratings__box {
+        padding: 1.5rem; } }
+    @media only screen and (max-width: 40em) {
+      .ratings__box {
+        max-width: 50rem; } }
     .ratings__box:not(:last-child) {
       margin-bottom: 1.5rem; }
     .ratings__box:nth-child(2) {
@@ -79,21 +99,30 @@ body {
       align-self: flex-end; }
   .ratings__stars {
     margin-right: 2.5rem; }
-    @media only screen and (max-width: 24em) {
+    @media only screen and (max-width: 40em) {
       .ratings__stars {
         margin-right: 0;
         margin-bottom: 1.5rem; } }
   .ratings__icon-star {
-    margin-right: .5rem; }
+    margin-right: 0.5rem; }
 
 .testimonials {
   height: 30rem;
   display: flex;
   flex: 1;
-  margin-bottom: 2rem; }
-  @media only screen and (max-width: 24em) {
+  margin-bottom: 3rem; }
+  @media only screen and (max-width: 75em) {
+    .testimonials {
+      height: 25rem; } }
+  @media only screen and (max-width: 60em) {
+    .testimonials {
+      height: auto; } }
+  @media only screen and (max-width: 48.5em) {
     .testimonials {
       flex-direction: column;
+      margin-bottom: 2rem; } }
+  @media only screen and (max-width: 40em) {
+    .testimonials {
       height: auto; } }
 
 .testimonial {
@@ -103,26 +132,57 @@ body {
   padding: 4rem;
   border-radius: 6px;
   font-size: 1.3rem; }
-  @media only screen and (max-width: 24em) {
+  @media only screen and (max-width: 75em) {
+    .testimonial {
+      padding: 2rem; } }
+  @media only screen and (max-width: 60em) {
+    .testimonial {
+      height: initial; } }
+  @media only screen and (max-width: 48.5em) {
     .testimonial {
       height: auto;
+      max-width: 60rem;
       text-align: left;
+      font-size: 1.35rem; } }
+  @media only screen and (max-width: 40em) {
+    .testimonial {
       font-size: 1.35rem; } }
   .testimonial:not(:last-child) {
     margin-right: 2.5rem; }
-    @media only screen and (max-width: 24em) {
+    @media only screen and (max-width: 48.5em) {
       .testimonial:not(:last-child) {
         margin-right: 0;
-        margin-bottom: 2rem; } }
+        margin-bottom: 3rem; } }
+  @media only screen and (max-width: 60em) {
+    .testimonial:nth-child(1) {
+      align-self: stretch; } }
+  @media only screen and (max-width: 48.5em) {
+    .testimonial:nth-child(1) {
+      align-self: flex-start; } }
   .testimonial:nth-child(2) {
     align-self: center; }
+    @media only screen and (max-width: 60em) {
+      .testimonial:nth-child(2) {
+        align-self: stretch; } }
+    @media only screen and (max-width: 48.5em) {
+      .testimonial:nth-child(2) {
+        align-self: center; } }
   .testimonial:last-child {
     align-self: flex-end; }
+    @media only screen and (max-width: 60em) {
+      .testimonial:last-child {
+        align-self: stretch; } }
+    @media only screen and (max-width: 48.5em) {
+      .testimonial:last-child {
+        align-self: flex-end; } }
   .testimonial__user {
     display: flex;
     align-items: center;
     margin-bottom: 3rem;
     line-height: 1.5; }
+    @media only screen and (max-width: 48.5em) {
+      .testimonial__user {
+        margin-bottom: 2rem; } }
   .testimonial__user-photo {
     height: 4rem;
     width: 4rem;
@@ -135,15 +195,18 @@ body {
     color: var(--soft-pink); }
 
 .social-proof {
-  width: 144rem;
-  padding: 10rem 15rem;
+  width: 100%;
+  padding: 10rem;
   color: var(--very-dark-magenta);
   display: flex;
   flex-direction: column;
   background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
   background-position: top left, bottom right;
   background-repeat: no-repeat; }
-  @media only screen and (max-width: 24em) {
+  @media only screen and (max-width: 75em) {
+    .social-proof {
+      padding: 10rem 5rem; } }
+  @media only screen and (max-width: 40em) {
     .social-proof {
       width: 100%;
       border: 1px solid red;
@@ -154,13 +217,17 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 6rem; }
-    @media only screen and (max-width: 24em) {
+    @media only screen and (max-width: 40em) {
       .social-proof .section-header {
         flex-direction: column; } }
   .social-proof .header-textbox {
-    flex: 0 0 40%;
-    margin-right: 15rem; }
-    @media only screen and (max-width: 24em) {
+    flex: 0 1 44.5rem;
+    margin-right: auto; }
+    @media only screen and (max-width: 60em) {
+      .social-proof .header-textbox {
+        flex: 0 1 60%;
+        margin-right: 2rem; } }
+    @media only screen and (max-width: 40em) {
       .social-proof .header-textbox {
         margin-right: 0;
         margin-bottom: 4rem; } }

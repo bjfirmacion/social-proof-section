@@ -2,10 +2,22 @@
     height: 30rem;
     display: flex;
     flex: 1;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+
+    @include respond(tablet-landscape) {
+      height: 25rem;
+    }
+
+    @include respond(small-tablet-landscape) {
+      height: auto;
+    }
+
+    @include respond(tablet-portrait) {
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
 
     @include respond(mobile) {
-        flex-direction: column;
         height: auto;
     }
 }
@@ -18,27 +30,66 @@
     border-radius: 6px;
     font-size: 1.3rem;
 
+    @include respond(tablet-landscape) {
+      padding: 2rem;
+    }
+
+    @include respond(small-tablet-landscape) {
+      height: initial;
+    }
+
+    @include respond(tablet-portrait) {
+      height: auto;
+      max-width: 60rem;
+      text-align: left;
+      font-size: 1.35rem;
+  }
+
     @include respond(mobile) {
-        height: auto;
-        text-align: left;
         font-size: 1.35rem;
     }
 
     &:not(:last-child) {
         margin-right: 2.5rem;
 
-        @include respond(mobile) {
+        @include respond(tablet-portrait) {
             margin-right: 0;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
     }
 
+    &:nth-child(1) {
+      @include respond(small-tablet-landscape) {
+        align-self: stretch;
+      }
+
+      @include respond(tablet-portrait) {
+        align-self: flex-start;
+      }
+  }
+
     &:nth-child(2) {
         align-self: center;
+
+        @include respond(small-tablet-landscape) {
+          align-self: stretch;
+        }
+
+        @include respond(tablet-portrait) {
+          align-self: center;
+        }
     }
 
     &:last-child {
         align-self: flex-end;
+
+        @include respond(small-tablet-landscape) {
+          align-self: stretch;
+        }
+
+        @include respond(tablet-portrait) {
+          align-self: flex-end;
+        }
     }
 
     &__user {
@@ -46,6 +97,10 @@
         align-items: center;
         margin-bottom: 3rem;
         line-height: 1.5;
+
+        @include respond(tablet-portrait) {
+          margin-bottom: 2rem;
+        }
     }
 
     &__user-photo {

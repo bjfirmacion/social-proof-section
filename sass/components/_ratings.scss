@@ -1,56 +1,69 @@
 .ratings {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 54rem;
+
+  @include respond(small-tablet-landscape) {
+    flex: 0 2 40%;
+  }
+
+  @include respond(mobile) {
+    width: 100%;
+  }
+
+  &__box {
+    width: 80%;
+    background-color: var(--light-grayish-magenta);
+    border-radius: 6px;
+    padding: 2rem 3.5rem;
     display: flex;
-    flex-direction: column;
-    flex: 0 1 54rem;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    @include respond(tablet-landscape) {
+      padding: 1.75rem 3rem;
+    }
+
+    @include respond(small-tablet-landscape) {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    @include respond(tablet-portrait) {
+      padding: 1.5rem;
+    }
 
     @include respond(mobile) {
-        width: 100%;
+      max-width: 50rem;
     }
 
-    &__box {
-        width: 80%;
-        background-color: var(--light-grayish-magenta);
-        border-radius: 6px;
-        padding: 2rem 3.5rem;
-        display: flex;
-        align-items: center;
-        font-size: 1.3rem;
-        font-weight: 700;
-
-        @include respond(mobile) {
-            width: 100%;
-            flex-direction: column;
-        }
-
-        &:not(:last-child) {
-            margin-bottom: 1.5rem;
-        }
-
-        &:nth-child(2) {
-            align-self: center;
-        }
-
-        &:last-child {
-            align-self: flex-end;
-        }
-
-        
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
     }
 
-    &__stars {
-        margin-right: 2.5rem;
-
-        @include respond(mobile) {
-            margin-right: 0;
-            margin-bottom: 1.5rem;
-        }
+    &:nth-child(2) {
+      align-self: center;
     }
 
-    &__icon-star {
-        margin-right: .5rem;
+    &:last-child {
+      align-self: flex-end;
     }
+  }
 
-    &__text {
+  &__stars {
+    margin-right: 2.5rem;
 
+    @include respond(mobile) {
+      margin-right: 0;
+      margin-bottom: 1.5rem;
     }
+  }
+
+  &__icon-star {
+    margin-right: 0.5rem;
+  }
+
+  &__text {
+  }
 }
