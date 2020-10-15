@@ -15,7 +15,6 @@
 
     @include respond(mobile) {
         width: 100%;
-        border: 1px solid red;
         padding: 10rem 3rem;
         text-align: center;
     }

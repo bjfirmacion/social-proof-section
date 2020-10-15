@@ -208,7 +208,6 @@ body {
   @media only screen and (max-width: 40em) {
     .social-proof {
       width: 100%;
-      border: 1px solid red;
       padding: 10rem 3rem;
       text-align: center; } }
   .social-proof .section-header {
