@@ -1,0 +1,8 @@
+//MEDIA QUERY MANAGER
+// note: 1em = 16px by browser default
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == mobile {
+        @media only screen and (max-width: 24em) { @content }; //approx. 375px
+    }
+}

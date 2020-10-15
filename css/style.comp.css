@@ -1,0 +1,166 @@
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%); }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 24em) {
+    html {
+      font-size: 56.25%; } }
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem; }
+
+.heading-secondary--main {
+  font-size: 4.5rem;
+  display: block; }
+  @media only screen and (max-width: 24em) {
+    .heading-secondary--main {
+      font-size: 3.5rem; } }
+
+.heading-secondary--sub {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.7;
+  display: block;
+  margin-top: 1.5rem; }
+  @media only screen and (max-width: 24em) {
+    .heading-secondary--sub {
+      font-size: 1.5rem; } }
+
+.paragraph {
+  line-height: 1.7; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: -2rem; }
+
+.attribution a {
+  color: #3e52a3; }
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  flex: 1; }
+  @media only screen and (max-width: 24em) {
+    .ratings {
+      width: 100%; } }
+  .ratings__box {
+    width: 80%;
+    background-color: var(--light-grayish-magenta);
+    border-radius: 6px;
+    padding: 2rem 3.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 700; }
+    @media only screen and (max-width: 24em) {
+      .ratings__box {
+        width: 100%;
+        flex-direction: column; } }
+    .ratings__box:not(:last-child) {
+      margin-bottom: 1.5rem; }
+    .ratings__box:nth-child(2) {
+      align-self: center; }
+    .ratings__box:last-child {
+      align-self: flex-end; }
+  .ratings__stars {
+    margin-right: 2.5rem; }
+    @media only screen and (max-width: 24em) {
+      .ratings__stars {
+        margin-right: 0;
+        margin-bottom: 1.5rem; } }
+  .ratings__icon-star {
+    margin-right: .5rem; }
+
+.testimonials {
+  height: 30rem;
+  display: flex;
+  flex: 1;
+  margin-bottom: 2rem; }
+  @media only screen and (max-width: 24em) {
+    .testimonials {
+      flex-direction: column;
+      height: auto; } }
+
+.testimonial {
+  height: 90%;
+  background-color: var(--very-dark-magenta);
+  color: var(--light-grayish-magenta);
+  padding: 4rem;
+  border-radius: 6px;
+  font-size: 1.3rem; }
+  @media only screen and (max-width: 24em) {
+    .testimonial {
+      height: auto;
+      text-align: left;
+      font-size: 1.35rem; } }
+  .testimonial:not(:last-child) {
+    margin-right: 2.5rem; }
+    @media only screen and (max-width: 24em) {
+      .testimonial:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 2rem; } }
+  .testimonial:nth-child(2) {
+    align-self: center; }
+  .testimonial:last-child {
+    align-self: flex-end; }
+  .testimonial__user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    line-height: 1.5; }
+  .testimonial__user-photo {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    margin-right: 2rem; }
+  .testimonial__user-name {
+    font-weight: 500; }
+  .testimonial__user-verified {
+    font-weight: 400;
+    color: var(--soft-pink); }
+
+.social-proof {
+  width: 144rem;
+  padding: 10rem 15rem;
+  color: var(--very-dark-magenta);
+  display: flex;
+  flex-direction: column;
+  background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat; }
+  @media only screen and (max-width: 24em) {
+    .social-proof {
+      width: 100%;
+      border: 1px solid red;
+      padding: 10rem 3rem;
+      text-align: center; } }
+  .social-proof .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6rem; }
+    @media only screen and (max-width: 24em) {
+      .social-proof .section-header {
+        flex-direction: column; } }
+  .social-proof .header-textbox {
+    flex: 0 0 40%;
+    margin-right: 15rem; }
+    @media only screen and (max-width: 24em) {
+      .social-proof .header-textbox {
+        margin-right: 0;
+        margin-bottom: 4rem; } }

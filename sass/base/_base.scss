@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; // defines 1rem = 10px (per browser default of 16px)
+
+    @include respond(mobile) {
+        font-size: 56.25%; // changes 1rem to 8px
+    }
+}
